@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="320.0" prefWidth="270.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primez.Controller">
+    <stylesheets>
+        <URL value="@fxmlprime.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="14.0" layoutY="10.0" prefHeight="300.0" prefWidth="255.0" spacing="5.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="240.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="inputField" prefHeight="40.0" prefWidth="145.0" />
+                  <Button mnemonicParsing="false" onAction="#checkPrimity" prefHeight="40.0" prefWidth="90.0" text="isPrime">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <Label fx:id="label" prefHeight="25.0" prefWidth="251.0">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="220.0" prefWidth="230.0" spacing="15.0">
+               <children>
+                  <ListView fx:id="listView" prefHeight="220.0" prefWidth="140.0" />
+                  <VBox prefHeight="220.0" prefWidth="95.0" spacing="41.0">
+                     <children>
+                        <RadioButton fx:id="radioButton" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Pick Range">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></RadioButton>
+                        <Button mnemonicParsing="false" onAction="#makeTXT" prefHeight="60.0" prefWidth="95.0" text="Text File">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <HBox prefHeight="60.0" prefWidth="95.0" spacing="2.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#previousPrime" prefHeight="60.0" prefWidth="48.0" text="&lt;&lt;">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextPrime" prefHeight="60.0" prefWidth="48.0" text="&gt;&gt;">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
